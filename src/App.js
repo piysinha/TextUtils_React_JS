@@ -3,9 +3,9 @@ import './App.css';
 import Navbar from './components/Navbar'
 import TextForm from './components/TextForm'
 import Alert from './components/Alert'
-import About from './components/About'
+// import About from './components/About'
 import React from "react";
-import { BrowserRouter, Routes, Route} from 'react-router-dom';
+// import { BrowserRouter, Routes, Route} from 'react-router-dom';
 
 
 function App() {
@@ -43,16 +43,17 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      {/* <BrowserRouter> */}
       <Navbar title='TextUtils' aboutText="About" mode={mode} toggleMode={toggleMode} />
       <Alert alert={alert} />
       <div className="container my-3">
-        <Routes>
+        {/* <Routes>
         <Route exact path="/" element={<TextForm showAlert={showAlert} heading = "Exter your Text to Analyze Below" mode={mode}/>} />
           <Route exact path="/About" element={<About />} />
-        </Routes>
+        </Routes> */}
+        {<TextForm showAlert={showAlert} heading = "Exter your Text to Analyze Below" mode={mode}/>}
       </div >
-      </BrowserRouter>
+      {/* </BrowserRouter> */}
     </>
   );
 }
